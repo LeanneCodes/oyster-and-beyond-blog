@@ -57,8 +57,8 @@ const PostDetail = ({ post }) => {
               <Image
                 src={post.author.photo.url}
                 alt={post.author.name}
-                height="30px"
-                width="30px"
+                height={30}
+                width={30}
                 className='align-middle rounded-full'
               />
               <p className='inline align-middle text-gray-700 ml-2 text-lg'>{post.author.name}</p>
