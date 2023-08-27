@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link';
+import Image from 'next/image';
 import { getCategories } from '../services'
 
 const Header = () => {
@@ -12,18 +13,25 @@ const Header = () => {
 
     return (
         <div className='container mx-auto px-10 mb-8'>
-            <div className='border-b w-full inline-block border-blue-400 py-8'>
+            <div className='border-b w-full inline-block border-white-400 py-8'>
                 <div className="md:float-left block">
                     <Link href="/">
-                        <span className="cursor-pointer font-bold text-4xl text-white">
-                            Oyster & Beyond
+                        <span className="cursor-pointer">
+                            <Image
+                                alt="logo"
+                                height={100}
+                                width={600}
+                                unoptimized
+                                className="align-middle"
+                                src='/OysterBeyondLogo.png'
+                            />
                         </span>
                     </Link>
                 </div>
                 <div className='hidden md:float-left md:contents'>
                     {categories.map((category) => (
                         <Link key={category.slug} href={`/category/${category.slug}`}>
-                            <span className='md:float-right mt-2 align-middle text-white ml-4 font-semibold cursor-pointer'>
+                            <span className='md:float-right mt-8 align-middle text-white ml-4 font-semibold cursor-pointer'>
                                 {category.name}
                             </span>
                         </Link>

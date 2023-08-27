@@ -1,4 +1,5 @@
 import { FeaturedPosts } from '../sections/index';
+import { Intro } from '../sections/index';
 import { PostCard, Categories, PostWidget } from '../components';
 import { getPosts } from '../services';
 
@@ -6,6 +7,7 @@ export default function Home({ posts }) {
   return (
     <div className="container mx-auto px-10 mb-8">
       <FeaturedPosts />
+      <Intro />
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
         <div className="lg:col-span-8 col-span-1">
           {posts.map((post, index) => (
