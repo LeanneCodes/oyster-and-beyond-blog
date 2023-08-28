@@ -20,9 +20,9 @@ const Header = () => {
                             <Image
                                 alt="logo"
                                 height={100}
-                                width={600}
+                                width={400}
                                 unoptimized
-                                className="align-middle"
+                                className="align-middle mt-2"
                                 src='/OysterBeyondLogo.png'
                             />
                         </span>
@@ -31,7 +31,7 @@ const Header = () => {
                 <div className='hidden md:float-left md:contents'>
                     {categories.map((category) => (
                         <Link key={category.slug} href={`/category/${category.slug}`}>
-                            <span className='md:float-right mt-8 align-middle text-white ml-4 font-semibold cursor-pointer'>
+                            <span className='md:float-right mt-5 align-middle text-white ml-4 font-semibold cursor-pointer'>
                                 {category.name}
                             </span>
                         </Link>
